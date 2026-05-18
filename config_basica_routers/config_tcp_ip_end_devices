@@ -1,0 +1,34 @@
+configuracoes TCP/IP
+
+
+REDE A (192.168.0.0)
+
+PC0:
+IP Address -> 192.168.0.2
+Subnet Mask -> 255.255.255.0
+Default Gateway -> 192.168.0.1
+DNS Server -> 0.0.0.0
+
+
+PC1:
+IP Address -> 192.168.0.3
+Subnet Mask -> 255.255.255.0
+Default Gateway -> 192.168.0.1
+DNS Server -> 0.0.0.0
+
+
+REDE B (192.168.1.0)
+
+
+PC2:
+IP Address -> 192.168.1.2
+Subnet Mask -> 255.255.255.0
+Default Gateway -> 192.168.1.1
+DNS Server -> 0.0.0.0
+
+
+PC3:
+IP Address -> 192.168.1.3
+Subnet Mask -> 255.255.255.0
+Default Gateway -> 192.168.1.1
+DNS Server -> 0.0.0.0
