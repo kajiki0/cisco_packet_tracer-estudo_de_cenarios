@@ -1,0 +1,32 @@
+cli - Router0
+
+> enable 			//entrar no modo de configuracao global
+# configure terminal		//modo de configuracao do router
+# hostname [nome]		//trocar o nome do router. "ROTEADOR"
+# line console 0		//configurar a porta console
+# password [senha]		//setar senha. "TESTE"
+# login				//ativar a solicitacao de senha
+# exec-timeout 8 0		//encerrar a sessao apos 8 minutos de inatividade
+# exit				//encerrar configuracao
+
+
+configurar as interfaces de cada switch
+rede A: gigabitEthernet 0/0
+rede B: gigabitEthernet 0/1
+
+lembrando que:
+endereco para indentificar a rede: 192.168.0.0
+primeiro ip utilizavel(geralmente usado como gateway)
+
+
+# interface gigabitEthernet 0/0
+# ip address 192.168.0.1 255.255.255.0	//configurar o endereco e mascara de rede na interface
+# description REDE A			//atribui uma descricao a interface
+# no shutdown				//habilita a interface
+# exit					//sair da interface
+
+repita o mesmo passo com a outra interface(gigabitEthernet 0/1),mudando o ipv4 para 192.168.1.1
+
+Salvar as configuracoes( se estiver na config-if, utilize o comando exit duas vezes para ir para a configuracao global):
+
+# copy running-config startup-config 	//salvar as configuracoes na memoria do router
